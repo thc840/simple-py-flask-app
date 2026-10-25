@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body { font-family: Arial,sans-serif; 
+          margin: 40px; 
+          background-color: #f4f7f6; 
+        }
+        h1 { color: #333; }
+        table { width: 100%; 
+          border-collapse: collapse; 
+          margin-top: 20px; 
+          background: white; }
+        th, td { padding: 12px; 
+          text-align: left; 
+          border-bottom: 1px solid #ddd; }
+        th { background-color: #007bff; 
+          color: white; }
+        tr:hover { background-color: #f1f1f1; }
+    </style>
+</head>
+<body>
+
+    <h1>Student Management Roster</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Major</th>
+                <th>GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in student_list %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.major }}</td>
+                <td>{{ student.gpa }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
+
